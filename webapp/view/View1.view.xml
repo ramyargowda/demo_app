@@ -2,8 +2,27 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content></content>
+				<Page title="Login Form">
+					<content>
+						<VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+							<items>
+								<Input id="uid" placeholder="User ID"/>
+								<Input id="pasw" placeholder="Password" type="Password"/>
+								<Label></Label>
+								<Button width="12rem" text="Login" type="Emphasized" press="onLoginTap"/>
+							</items>
+						</VBox>
+					</content>
+					<footer>
+						<Bar>
+							<contentLeft>
+								<Text text="Signiwis"/>
+							</contentLeft>
+							<contentRight>
+								<Text text="Employee Login"/>
+							</contentRight>
+						</Bar>
+					</footer>
 				</Page>
 			</pages>
 		</App>
