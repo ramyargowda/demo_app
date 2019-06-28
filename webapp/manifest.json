@@ -98,7 +98,7 @@
 						"targetAggregation": "detailPages",
 						"subroutes": [{
 							"name": "Detail1",
-							"pattern": "SplitScreen/SplitScreen{employeeID}",
+							"pattern": "SplitScreen/{employeeID}",
 							"view": "detail",
 							"targetAggregation": "detailPages"
 						}]
