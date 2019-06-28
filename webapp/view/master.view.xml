@@ -3,7 +3,13 @@
 	<App>
 		<pages>
 			<Page title="Title">
+				<!--<headerContent>-->
+					
+				<!--</headerContent>-->
 				<content>
+					<Toolbar>
+						<SearchField liveChange="onSearch"></SearchField>
+					</Toolbar>
 					<List id="idEmpList" items="{/Employees}" itemPress="onSelectItem" mode="SingleSelectMaster">
 						<items>
 							<ObjectListItem title="{preferredFullName}" intro="{userId}" type="Navigation">

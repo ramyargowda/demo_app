@@ -19,6 +19,30 @@ sap.ui.define([
 			this.oRouter.navTo("Detail1",{
 				employeeID: aPath.split("/")[aPath.split("/").length-1]
 			});
+		},
+		onSearch: function(oEvent) {
+			var searchStr = oEvent.getParameter("query");
+			if(!searchStr){
+				searchStr = oEvent.getParameter("newValue");
+			}
+				var eName = new sap.ui.model.Filter(
+					"preferredFullName",
+					sap.ui.model.FilterOperator.Contains,
+					searchStr
+				);
+				var eId = new sap.ui.model.Filter(
+					"userId",
+					sap.ui.model.FilterOperator.Contains,
+					searchStr
+				);
+				var filters = new sap.ui.model.Filter({
+						filters: [eName, eId],
+						and: false
+					});
+				var aFilters = [filters];
+				var oList = this.getView().byId("idEmpList");
+				oList.getBinding("items").filter(aFilters);
+			
 		}
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
