@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,14 +30,12 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
 			"viewName": "demo_git.demo_git.view.View1",
 			"type": "XML",
-			"async": true,
-			"id": "View1"
+			"id": "app"
 		},
 		"dependencies": {
 			"minUI5Version": "1.60.1",
@@ -58,6 +55,10 @@
 				"settings": {
 					"bundleName": "demo_git.demo_git.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/MockData/employee.json"
 			}
 		},
 		"resources": {
@@ -69,26 +70,35 @@
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
-				"async": true,
 				"viewPath": "demo_git.demo_git.view",
-				"controlAggregation": "pages",
-				"controlId": "app",
-				"clearControlAggregation": false
+				"clearTarget": false
 			},
 			"routes": [{
 				"name": "RouteView1",
 				"pattern": "RouteView1",
-				"target": ["TargetView1"]
-			}],
-			"targets": {
-				"TargetView1": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
-					"viewId": "View1",
-					"viewName": "View1"
-				}
-			}
+				"view": "View1",
+				"targetControl": "app",
+				"targetAggregation": "pages"
+			}, {
+				"name": "SplitView",
+				"pattern": "SplitScreen",
+				"view": "sApp",
+				"targetControl": "app",
+				"targetAggregation": "pages",
+				"subroutes": [{
+					"name": "Master",
+					"pattern": "SplitScreen_Master",
+					"view": "master",
+					"targetControl": "idSplitApp",
+					"targetAggregation": "masterPages",
+					"subroutes": [{
+						"name": "Detail",
+						"pattern": "SplitScreen_Master/{Detail_EmployeeID}",
+						"view": "detail",
+						"targetAggregation": "detailPages"
+					}]
+				}]
+			}]
 		}
 	}
 }

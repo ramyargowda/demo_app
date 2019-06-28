@@ -1,0 +1,64 @@
+{
+"Employees" : [
+{
+"userId":"S0001",
+"jobTitleName":"Developer",
+"firstName":"Praveen",
+"lastName":"Reddy",
+"preferredFullName":"Praveen Reddy",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-1234567",
+"emailAddress":"praveen.reddy@signiwis.com"
+},
+{
+"userId":"S0002",
+"jobTitleName":"Developer",
+"firstName":"Manohar",
+"lastName":"Klukarni",
+"preferredFullName":"Manohar Kulkarni",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-1111111",
+"emailAddress":"manohar.k@signiwis.com"
+},
+{
+"userId":"S0003",
+"jobTitleName":"Developer",
+"firstName":"Arun",
+"lastName":"Mathew",
+"preferredFullName":"Arun Mathew",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-2222222",
+"emailAddress":"arun.m@signiwis.com"
+},
+{
+"userId":"S0004",
+"jobTitleName":"Developer",
+"firstName":"Shruthi",
+"lastName":"Manohar",
+"preferredFullName":"Shruthi Manohar",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-2226758",
+"emailAddress":"shruthi@signiwis.com"
+},
+{
+"userId":"S0005",
+"jobTitleName":"Developer",
+"firstName":"Poornima",
+"lastName":"Prasanna",
+"preferredFullName":"Poornima Prasanna",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-1234567",
+"emailAddress":"poornima.p@signiwis.com"
+},
+{
+"userId":"S0006",
+"jobTitleName":"Developer",
+"firstName":"Sindhu",
+"lastName":"Gowda",
+"preferredFullName":"Sindhu Gowda",
+"designation":"SAPUI5 Developer",
+"phoneNumber":"408-7654321",
+"emailAddress":"sindhu@signiwis.com"
+}
+]
+}

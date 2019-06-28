@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="demo_git.demo_git.controller.master"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<List id="idEmpList" items="{/Employees}">
+						<items>
+							<ObjectListItem title="{preferredFullName}" intro="{userId}">
+								<attributes>
+									<ObjectAttribute text="{designation}"></ObjectAttribute>
+									<ObjectAttribute text="{phoneNumber}"></ObjectAttribute>
+									<ObjectAttribute text="{emailAddress}"></ObjectAttribute>
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

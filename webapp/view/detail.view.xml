@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="demo_git.demo_git.controller.detail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:form="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<form:SimpleForm editable="true" title="Employee Details">
+						<Label text="Employee Name:"></Label>
+						<Text text=""></Text>
+						<Label text="Employee ID:"></Label>
+						<Text text=""></Text>
+						<Label text="Employee Designation:"></Label>
+						<Text text=""></Text>
+						<Label text="Email:"></Label>
+						<Text text=""></Text>
+						<Label text="Mobile:"></Label>
+						<Text text=""></Text>
+					</form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

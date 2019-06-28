@@ -12,7 +12,7 @@ sap.ui.define([
 				this.getView().byId("uid").setValue("");
 				this.getView().byId("pasw").setValue("");
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("admin");
+				oRouter.navTo("SplitView");
 			} else if (uid !== "" && pasw !== "") {
 				sap.m.MessageToast.show("Authentication failed");
 			} else {

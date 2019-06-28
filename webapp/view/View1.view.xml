@@ -1,5 +1,5 @@
 <mvc:View controllerName="demo_git.demo_git.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
+	<!--<Shell id="shell">-->
 		<App id="app">
 			<pages>
 				<Page title="Login Form">
@@ -26,5 +26,5 @@
 				</Page>
 			</pages>
 		</App>
-	</Shell>
+	<!--</Shell>-->
 </mvc:View>
