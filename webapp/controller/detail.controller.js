@@ -18,7 +18,10 @@ sap.ui.define([
 			var sPath = oEvent.getParameter("arguments").employeeID;
 			sPath = "/Employees/"+sPath;
 			this.getView().bindElement(sPath);
-		}
+		},
+		onLogout: function(oEvent){
+			this.oRouter.navTo("RouteView1");
+		} 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).

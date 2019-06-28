@@ -3,6 +3,9 @@
 	<App>
 		<pages>
 			<Page title="Title">
+				<headerContent>
+					<Button icon="sap-icon://log" press="onLogout"></Button>
+				</headerContent>
 				<content>
 					<form:SimpleForm editable="true" title="Employee Details">
 						<Label text="Employee Name:"></Label>
