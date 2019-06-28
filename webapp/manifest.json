@@ -75,7 +75,7 @@
 			},
 			"routes": [{
 				"name": "RouteView1",
-				"pattern": "RouteView1",
+				"pattern": "",
 				"view": "View1",
 				"targetControl": "app",
 				"targetAggregation": "pages"
@@ -87,15 +87,21 @@
 				"targetAggregation": "pages",
 				"subroutes": [{
 					"name": "Master",
-					"pattern": "SplitScreen_Master",
+					"pattern": "SplitScreen",
 					"view": "master",
 					"targetControl": "idSplitApp",
 					"targetAggregation": "masterPages",
 					"subroutes": [{
 						"name": "Detail",
-						"pattern": "SplitScreen_Master/{Detail_EmployeeID}",
+						"pattern": "SplitScreen",
 						"view": "detail",
-						"targetAggregation": "detailPages"
+						"targetAggregation": "detailPages",
+						"subroutes": [{
+							"name": "Detail1",
+							"pattern": "SplitScreen/SplitScreen{employeeID}",
+							"view": "detail",
+							"targetAggregation": "detailPages"
+						}]
 					}]
 				}]
 			}]

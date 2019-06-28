@@ -6,15 +6,15 @@
 				<content>
 					<form:SimpleForm editable="true" title="Employee Details">
 						<Label text="Employee Name:"></Label>
-						<Text text=""></Text>
+						<Text text="{preferredFullName}"></Text>
 						<Label text="Employee ID:"></Label>
-						<Text text=""></Text>
+						<Text text="{userId}"></Text>
 						<Label text="Employee Designation:"></Label>
-						<Text text=""></Text>
+						<Text text="{designation}"></Text>
 						<Label text="Email:"></Label>
-						<Text text=""></Text>
+						<Text text="{emailAddress}"></Text>
 						<Label text="Mobile:"></Label>
-						<Text text=""></Text>
+						<Text text="{phoneNumber}"></Text>
 					</form:SimpleForm>
 				</content>
 			</Page>

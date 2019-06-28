@@ -11,9 +11,15 @@ sap.ui.define([
 		 * @memberOf demo_git.demo_git.view.master
 		 */
 		onInit: function () {
-
+			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		},
-
+		onSelectItem: function(oEvent) {
+			var sPath = oEvent.getParameter("listItem");
+			var aPath = sPath.getBindingContextPath();
+			this.oRouter.navTo("Detail1",{
+				employeeID: aPath.split("/")[aPath.split("/").length-1]
+			});
+		}
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).

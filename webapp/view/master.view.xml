@@ -4,9 +4,9 @@
 		<pages>
 			<Page title="Title">
 				<content>
-					<List id="idEmpList" items="{/Employees}">
+					<List id="idEmpList" items="{/Employees}" itemPress="onSelectItem" mode="SingleSelectMaster">
 						<items>
-							<ObjectListItem title="{preferredFullName}" intro="{userId}">
+							<ObjectListItem title="{preferredFullName}" intro="{userId}" type="Navigation">
 								<attributes>
 									<ObjectAttribute text="{designation}"></ObjectAttribute>
 									<ObjectAttribute text="{phoneNumber}"></ObjectAttribute>

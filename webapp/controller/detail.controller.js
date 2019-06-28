@@ -11,9 +11,14 @@ sap.ui.define([
 		 * @memberOf demo_git.demo_git.view.detail
 		 */
 		onInit: function () {
-
+			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			this.oRouter.attachRoutePatternMatched(this.onFetch, this);
 		},
-
+		onFetch: function(oEvent) {
+			var sPath = oEvent.getParameter("arguments").employeeID;
+			sPath = "/Employees/"+sPath;
+			this.getView().bindElement(sPath);
+		}
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).
